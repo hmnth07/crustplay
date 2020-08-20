@@ -1,0 +1,319 @@
+/* NAVBAR STARTS HERE */
+
+.navbar {
+  font-family: myFirstFont;
+  src: url(sansation_light.woff);
+  position:fixed;
+  background-color:#0D0D0D;
+  color:white;
+  display:grid; 
+  grid-template-columns: auto auto;
+  width:100%;
+  top:0;
+  right:0;
+}
+  
+.navbar > .start > img {
+  padding-left:45px;
+  margin-top:7px;
+  margin-bottom:10px;
+}
+
+.navbar > .end > .fa-bell {
+  position: absolute;
+  bottom:20px;
+  right:120px;
+  font-size:25px;    
+}
+
+.navbar > .end > .login-wrap {
+  position:absolute;
+  bottom:15px;
+  right:20px;
+  width: auto;
+  height: auto;
+  margin: -50px 0 0 -150px;
+  text-align: center;
+  /*border: 1px solid white;*/
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, #ff0108, #ff0178);
+  border-image-slice: 1;
+  padding: 2px;
+  
+}
+
+.navbar > .end > .login-wrap:hover {
+  background-image: linear-gradient(to right,#ff0108, #ff0178);
+  color:black;
+}
+
+.navbar > .end > .login-wrap h1 {
+  font-family: "Open Sans";
+  font-weight: 30px;
+  font-size: 1.2em;
+  margin: 3px 10px 3px;
+  color: #ff0108;
+}
+
+.navbar > .end > .login-wrap:hover h1 {
+  color:black;
+}
+
+ 
+@media(min-width:500px) {
+  .navbar > .start > img {
+    padding-left:100px;
+  }
+  .navbar > div > .fa-bars {
+    padding-left:20px;
+  }
+}
+  
+.navbar > div > .fa-bars {
+  position:absolute;
+  margin-left:15px;
+  margin-top:10px;
+  font-size:25px;
+}
+
+.navbar > .start {
+  text-align:start;
+  margin-top:10px;
+  color:white;
+}
+
+.navbar > .end {
+  text-align:end;
+  padding-right:15px;
+}
+/* NAVBAR ENDS */
+
+/* LEFT-SIDE-NAVBAR START */
+@media only screen and (max-width: 600px) {
+  .left-side {
+    display:none;
+  }
+}
+.navbar > .left-side {
+  height:100%;
+  width:90px;
+  position:fixed;
+  top:65px;
+  left:0;
+  z-index: 1;
+  background-color:black;
+  text-align:center;
+  font-family: myFirstFont;
+  src: url(sansation_light.woff);
+  font-size:15px;
+}
+
+.navbar > .left-side i {
+  margin-top:3px;
+  font-size:25px;
+}
+/* LEFT-SIDE-NAVBAR END */
+
+/* SIDENAV START */
+.sidenav {
+  height: 100%; 
+  width: 0;
+  position: fixed; 
+  z-index: 2; 
+  top: 58px; 
+  left: 0;
+  background-color: black; 
+  overflow-x: hidden; 
+  padding-top: 25px; 
+  transition: 0.5s; 
+}
+
+.sidenav a {
+  font-family: myFirstFont;
+  src: url(sansation_light.woff);
+  padding: 8px 8px 8px 30px;
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  font-size: 30px;
+  margin-left: 0px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+    /* SIDENAV END */
+  
+/* ____________________________________header close_________________________________________________ */
+
+/* TOURNAMENT START  */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #212020;
+}
+main {
+ padding-top: 60px;
+ padding-left: 110px;
+ background: #212020;
+ color: cornsilk;
+}
+.selectGameContainer {
+  display: flex;
+}
+.game {
+  margin: 20px;
+  width: 250px;
+  height: 250px;
+}
+main h2 {
+  font-size: 30px;
+  margin-top: 35px;
+}
+.trendingGame {
+  width: 500px;
+  height: 250px;
+  background: rgb(202, 202, 233);
+  margin: 5px;
+  margin-block-end: 30px;
+  overflow: hidden;
+}
+.bottomContainer {
+  display: flex;
+}
+.registerBlock {
+  margin: 5px 0 0 50px;
+}
+input {
+  width: 250px;
+  height: 40px;
+  margin: 5px;
+  padding: 5px 0 5px 10px;
+}
+#registerBtn {
+  font-size: 16px;
+  margin-left: 5px;
+  padding: 5px 25px;
+  width: 180px;
+  height: 45px;
+  background: #ff0108; 
+  color: white;
+  border-style: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+#registerBtn:hover {
+  background: white;
+  color: red;
+}
+
+/*  */
+.game {
+  overflow: hidden;
+}
+.gameImg {
+  transition: 
+      transform 750ms cubic-bezier(.5, 0, .5, 1),
+      opacity 250ms linear;
+}
+.game:focus {
+  position: relative;
+  z-index: 2;
+}
+.gameImg:hover,
+.game:focus .gameImg {
+  transform: scale(1.2);
+  opacity: .5;
+}
+
+@media only screen and (max-width: 800px) {
+  .game {
+    margin: 10px;
+    width: 145px;
+    height: 145px;
+  }
+  .trendingGame {
+    width: 400px;
+    height: 200px;
+    margin: 5px;
+    margin-block-end: 30px;
+  }
+  .registerBlock {
+    margin: 5px 0 0 20px;
+  }  
+
+  input {
+    width: 220px;
+    height: 30px;
+    margin: 5px 30px 5px 0px;
+  }
+  #registerBtn {
+    font-size: 16px;
+    margin-left: 0px;
+    padding: 5px 10px;
+    width: 120px;
+    height: 35px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main {
+    padding-left: 10px;
+    padding-right: 10px;
+   }
+}
+@media only screen and (max-width: 480px) {
+  .game {
+    margin: 10px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+  }
+  main h2 {
+    font-size: 25px;
+    margin-top: 35px;
+  }
+  .trendingGame {
+    width: auto;
+    height: 250px;
+    margin: 0px;
+    margin-block-end: 10px;
+  }
+  .bottomContainer {
+    flex-direction: column;
+  }
+  .registerBlock {
+    margin: 35px 0 0 0px;
+    margin-block-end: 50px;
+  } 
+  input {
+    width: 100%;
+    height: 40px;
+    margin: 5px 0px 5px 0px;
+  }
+  #registerBtn {
+    float: right;
+    font-size: 16px;
+    margin-left: 0px;
+    padding: 5px 25px;
+    width: 50%;
+    height: 40px;
+  }
+}
+
+

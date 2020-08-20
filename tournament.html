@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png"> <!-- Favicon  -->
+    <title>Tournament</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="tournament.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
+    <!-- import the webpage's javascript file -->
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="start">
+          <i class="fa fa-bars" id="myBtn"></i>
+          <img
+            src="https://cdn.discordapp.com/attachments/716584548225253408/744762432844595200/Crust_Logo_web.png"
+            height="35"
+          />
+        </div>
+
+        <div class="end">
+          <i class="fa fa-bell"></i>
+          <div
+            class="login-wrap"
+            onmousedown="return false;"
+            onselectstar="return false;"
+          >
+            <h1>LOGIN</h1>
+          </div>
+        </div>
+
+        <div class="left-side">
+          <p>
+          <i class="fa fa-home"></i>
+          </p>
+          HOME
+          <p>
+          <i class="fa fa-trophy"></i>
+          </p>
+          TOURNEY
+          <p>
+          <img src="https://cdn.discordapp.com/attachments/716584548225253408/744927477935243357/20200817_200522.png" height="35">
+          </p>
+          PRACTICE
+        </div>
+      </div>
+
+      <div id="mySidenav" class="sidenav">
+        <a href="#">HOME</a>
+        <a href="#">TOURNAMENT</a>
+        <a href="#">PRACTICE</a>
+        <a href="#">MY TEAM</a>
+        <a href="#">ABOUT</a>
+      </div>
+    </header>
+<!-- MAIN Section starts here / TOURNAMENT -->
+    <main>
+      <h1>SELECT GAME</h1>
+        <div class="selectGameContainer"> <!-- flex container START-->
+            <div class="game">
+              <picture>
+                <source media="(min-width: 800px)" srcset="images/CODM.jpg">
+                <source media="(min-width: 480px)" srcset="images/CODM-2.jpg">
+                <source srcset="images/CODM-3.jpg">
+                <img src="images/CODM.jpg" alt="" class="gameImg">
+              </picture>
+            </div>
+
+            <div class="game">
+              <picture>
+                <source media="(min-width: 800px)" srcset="images/PUBG.png">
+                <source media="(min-width: 480px)" srcset="images/PUBG-2.png">
+                <source srcset="images/PUBG-3.png">
+                <img src="images/PUBG.png" alt="" class="gameImg">
+              </picture>
+            </div>
+
+            <div class="game">
+              <picture>
+                <source media="(min-width: 800px)" srcset="images/freefire.jpg">
+                <source media="(min-width: 480px)" srcset="images/freefire-2.jpg">
+                <source srcset="images/freefire-3.jpg">
+                <img src="images/freefire.jpg" alt="" class="gameImg">
+              </picture>
+            </div>
+
+            <div class="game">
+              <picture>
+                <source media="(min-width: 800px)" srcset="images/valorant.jpg">
+                <source media="(min-width: 480px)" srcset="images/valorant-2.jpg">
+                <source srcset="images/valorant-3.jpg">
+                <img src="images/valorant.jpg" alt="" class="gameImg">
+              </picture>
+            </div>
+        </div> <!--Selectgame flex container END-->
+      
+        <h2>TRENDING</h2>
+        <div class="bottomContainer"> <!-- BOTTOM flex container START -->
+          <div class="trendingGame">
+            <picture>
+              <source media="(min-width: 800px)" srcset="images/trending.jpg">
+              <source media="(min-width: 480px)" srcset="images/trending-2.jpg">
+              <source srcset="images/trending-3.jpg">
+              <img src="images/trending.jpg" alt="">
+            </picture>
+          </div>
+
+          <div class="registerBlock">
+            <form>
+              <input type="text" id=name name="name" placeholder="Your name" required><br>
+              <input type="text" id=details name="details" placeholder="ID" required><br>
+              <input type="number" id=prizepool name="prizepool" placeholder="Prize pool" required><br><br>
+              <button type="submit" id="registerBtn">Register</button>
+            </form>
+          </div>  
+        </div>     
+    </main> <!--BOTTOM flex conatiner END-->
+
+  </body>
+</html>
